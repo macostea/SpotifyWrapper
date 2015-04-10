@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		157F76981AD7CA40008BCCD2 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F76971AD7CA40008BCCD2 /* WindowController.swift */; };
 		15DD14DA1AD7B74F00E69BB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD14D91AD7B74F00E69BB7 /* AppDelegate.swift */; };
 		15DD14DC1AD7B74F00E69BB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD14DB1AD7B74F00E69BB7 /* ViewController.swift */; };
 		15DD14DE1AD7B74F00E69BB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15DD14DD1AD7B74F00E69BB7 /* Images.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		157F76971AD7CA40008BCCD2 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		15DD14D41AD7B74F00E69BB7 /* SpotifyWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DD14D81AD7B74F00E69BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15DD14D91AD7B74F00E69BB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				15DD14D91AD7B74F00E69BB7 /* AppDelegate.swift */,
 				15DD14DB1AD7B74F00E69BB7 /* ViewController.swift */,
+				157F76971AD7CA40008BCCD2 /* WindowController.swift */,
 				15DD14DD1AD7B74F00E69BB7 /* Images.xcassets */,
 				15DD14DF1AD7B74F00E69BB7 /* Main.storyboard */,
 				15DD14D71AD7B74F00E69BB7 /* Supporting Files */,
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15DD14DC1AD7B74F00E69BB7 /* ViewController.swift in Sources */,
+				157F76981AD7CA40008BCCD2 /* WindowController.swift in Sources */,
 				15DD14DA1AD7B74F00E69BB7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +404,7 @@
 				15DD14F21AD7B74F00E69BB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15DD14F31AD7B74F00E69BB7 /* Build configuration list for PBXNativeTarget "SpotifyWrapperTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +413,7 @@
 				15DD14F51AD7B74F00E69BB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

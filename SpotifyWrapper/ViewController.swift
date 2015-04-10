@@ -19,8 +19,12 @@ class ViewController: NSViewController {
         let userAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17"
         let url = "http://play.spotify.com"
         
+        self.webView.preferences.javaScriptEnabled = true
+        self.webView.preferences.javaScriptCanOpenWindowsAutomatically = true
+        
         self.webView.customUserAgent = userAgent
         self.webView.mainFrameURL = url
+
     }
 
     override var representedObject: AnyObject? {
@@ -28,7 +32,5 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
 
