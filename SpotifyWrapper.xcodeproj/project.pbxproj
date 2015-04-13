@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		157F76981AD7CA40008BCCD2 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F76971AD7CA40008BCCD2 /* WindowController.swift */; };
+		159974C01ADC3D4600A56686 /* SPMediaKeyTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 159974BE1ADC3D4600A56686 /* SPMediaKeyTap.m */; };
+		159974C51ADC45E800A56686 /* SWWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159974C41ADC45E800A56686 /* SWWebView.swift */; };
+		159974C71ADC537500A56686 /* SPInvocationGrabbing in Resources */ = {isa = PBXBuildFile; fileRef = 159974C61ADC537500A56686 /* SPInvocationGrabbing */; };
 		15DD14DA1AD7B74F00E69BB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD14D91AD7B74F00E69BB7 /* AppDelegate.swift */; };
 		15DD14DC1AD7B74F00E69BB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD14DB1AD7B74F00E69BB7 /* ViewController.swift */; };
 		15DD14DE1AD7B74F00E69BB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15DD14DD1AD7B74F00E69BB7 /* Images.xcassets */; };
@@ -27,6 +30,11 @@
 
 /* Begin PBXFileReference section */
 		157F76971AD7CA40008BCCD2 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		159974BC1ADC3D4500A56686 /* SpotifyWrapper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpotifyWrapper-Bridging-Header.h"; sourceTree = "<group>"; };
+		159974BD1ADC3D4600A56686 /* SPMediaKeyTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPMediaKeyTap.h; sourceTree = "<group>"; };
+		159974BE1ADC3D4600A56686 /* SPMediaKeyTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPMediaKeyTap.m; sourceTree = "<group>"; };
+		159974C41ADC45E800A56686 /* SWWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWWebView.swift; sourceTree = "<group>"; };
+		159974C61ADC537500A56686 /* SPInvocationGrabbing */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SPInvocationGrabbing; sourceTree = "<group>"; };
 		15DD14D41AD7B74F00E69BB7 /* SpotifyWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DD14D81AD7B74F00E69BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15DD14D91AD7B74F00E69BB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +64,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		159974BB1ADC3D3B00A56686 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				159974C81ADC538300A56686 /* SPMediaKeyTap */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		159974C81ADC538300A56686 /* SPMediaKeyTap */ = {
+			isa = PBXGroup;
+			children = (
+				159974C61ADC537500A56686 /* SPInvocationGrabbing */,
+				159974BD1ADC3D4600A56686 /* SPMediaKeyTap.h */,
+				159974BE1ADC3D4600A56686 /* SPMediaKeyTap.m */,
+			);
+			name = SPMediaKeyTap;
+			sourceTree = "<group>";
+		};
 		15DD14CB1AD7B74F00E69BB7 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +106,7 @@
 				15DD14D91AD7B74F00E69BB7 /* AppDelegate.swift */,
 				15DD14DB1AD7B74F00E69BB7 /* ViewController.swift */,
 				157F76971AD7CA40008BCCD2 /* WindowController.swift */,
+				159974C41ADC45E800A56686 /* SWWebView.swift */,
 				15DD14DD1AD7B74F00E69BB7 /* Images.xcassets */,
 				15DD14DF1AD7B74F00E69BB7 /* Main.storyboard */,
 				15DD14D71AD7B74F00E69BB7 /* Supporting Files */,
@@ -90,6 +117,8 @@
 		15DD14D71AD7B74F00E69BB7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				159974BC1ADC3D4500A56686 /* SpotifyWrapper-Bridging-Header.h */,
+				159974BB1ADC3D3B00A56686 /* Third Party */,
 				15DD14D81AD7B74F00E69BB7 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -194,6 +223,7 @@
 			files = (
 				15DD14DE1AD7B74F00E69BB7 /* Images.xcassets in Resources */,
 				15DD14E11AD7B74F00E69BB7 /* Main.storyboard in Resources */,
+				159974C71ADC537500A56686 /* SPInvocationGrabbing in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,9 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159974C51ADC45E800A56686 /* SWWebView.swift in Sources */,
 				15DD14DC1AD7B74F00E69BB7 /* ViewController.swift in Sources */,
 				157F76981AD7CA40008BCCD2 /* WindowController.swift in Sources */,
 				15DD14DA1AD7B74F00E69BB7 /* AppDelegate.swift in Sources */,
+				159974C01ADC3D4600A56686 /* SPMediaKeyTap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,10 +363,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SpotifyWrapper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotifyWrapper/SpotifyWrapper-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -342,10 +377,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SpotifyWrapper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotifyWrapper/SpotifyWrapper-Bridging-Header.h";
 			};
 			name = Release;
 		};

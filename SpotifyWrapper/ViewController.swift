@@ -13,6 +13,8 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var webView: WebView!
     
+    var mediaKeyTap: SPMediaKeyTap?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +26,8 @@ class ViewController: NSViewController {
         
         self.webView.customUserAgent = userAgent
         self.webView.mainFrameURL = url
+        
+        self.addMediaKeyesTap()
 
     }
 
@@ -32,5 +36,76 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
+    // MARK:- Private
+    
+    func playPause() {
+        self.webView.stringByEvaluatingJavaScriptFromString("var iframe = document.getElementById('app-player');" +
+                                                    "var key = iframe.contentDocument.getElementById('play-pause');" +
+                                                    "key.click();"
+        )
+    }
+    
+    func forward() {
+        self.webView.stringByEvaluatingJavaScriptFromString("var iframe = document.getElementById('app-player');" +
+                                                    "var key = iframe.contentDocument.getElementById('next');" +
+                                                    "key.click();"
+        )
+    }
+    
+    func back() {
+        self.webView.stringByEvaluatingJavaScriptFromString("var iframe = document.getElementById('app-player');" +
+                                                    "var key = iframe.contentDocument.getElementById('previous');" +
+                                                    "key.click();"
+        )
+    }
+    
+    // MARK:- SPMediaKeyTapDelegate
+    
+    override func mediaKeyTap(keyTap: SPMediaKeyTap!, receivedMediaKeyEvent event: NSEvent!) {
+        let keyCode = ((event.data1 & 0xFFFF0000) >> 16);
+        let keyFlags = (event.data1 & 0x0000FFFF);
+        let keyState = (((keyFlags & 0xFF00) >> 8)) == 0xA;
+        let keyRepeat = (keyFlags & 0x1);
+        
+        if (keyState == true) {
+            
+            switch (keyCode) {
+                
+            case Int(NX_KEYTYPE_PLAY):
+                // Play things
+                println("Play pressed")
+                self.playPause()
+                
+            case Int(NX_KEYTYPE_FAST):
+                // Next
+                println("Next pressed")
+                self.forward()
+                
+            case Int(NX_KEYTYPE_REWIND):
+                // Back
+                println("Back pressed")
+                self.back()
+                
+            default:
+                // Other keyes
+                println("Other key pressed")
+            }
+        }
+        
+    }
+    
+    // MARK:- Private
+    
+    func addMediaKeyesTap() {
+        self.mediaKeyTap = SPMediaKeyTap(delegate: self)
+        
+        if (SPMediaKeyTap.usesGlobalMediaKeyTap()) {
+            self.mediaKeyTap?.startWatchingMediaKeys()
+        } else {
+            println("Media key monitoring disabled")
+        }
+    }
+
 }
 
